@@ -28,6 +28,20 @@ module.exports = class Product {
             quantityUnit: 'stuks',
             price: 1.05,
             category: 'fruit'
+        }, {
+            id: 203,
+            title: 'Kiwi',
+            quantity: 250,
+            quantityUnit: 'g',
+            price: 1.15,
+            category: 'fruit'
+        }, {
+            id: 204,
+            title: 'Mango',
+            quantity: 2,
+            quantityUnit: 'stuks',
+            price: 2.99,
+            category: 'fruit'
         }];
     }
 

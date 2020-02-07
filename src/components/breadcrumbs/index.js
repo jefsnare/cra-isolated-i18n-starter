@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link, Breadcrumbs, Typography } from '@material-ui/core';
+import { navigate } from "@reach/router";
 
-const handleClick = () => window.location = '';
+const handleClick = (href) => navigate(href);
 
-export const Breadcrumb = () => {
-    return (
-        <Breadcrumbs aria-label="breadcrumb">
-            <Link color="inherit" href="/" onClick={handleClick}>
-                Catalog
-        </Link>
-            <Link color="inherit" href="/" onClick={handleClick}>
-                Parent Taxonomy
-        </Link>
-            <Typography color="textPrimary">Current Taxonomy</Typography>
-        </Breadcrumbs>
-    )
-}
+export const Breadcrumb = (props) => {
+  return (
+    <Breadcrumbs aria-label="breadcrumb">
+      <Link color="inherit" onClick={() => handleClick('/')}>
+        Home
+      </Link>
+      <Link color="inherit" onClick={() => handleClick('/list')}>
+        Listpage
+      </Link>
+      <Typography color="textPrimary">Current Taxonomy</Typography>
+    </Breadcrumbs>
+  )
+};
