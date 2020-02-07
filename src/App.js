@@ -26,7 +26,7 @@ function App() {
           </Grid>
           <Router>
             <Index path="/" />
-            <ProductList path="list/:category" />
+            <ProductList path="/list" />
           </Router>
         </Grid>
       </main>

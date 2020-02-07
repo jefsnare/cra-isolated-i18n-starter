@@ -1,17 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const Product = require('./modules/product/index');
 
-const port = 3001;
+const port = 8081;
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const productsAPI = new Product();
 
-app.get('/products', (req, res, next) => {
+app.get('/api/products', (req, res, next) => {
     if (!productsAPI && !productsAPI.products) {
        res.status(400);
        next();
@@ -21,7 +23,7 @@ app.get('/products', (req, res, next) => {
     res.send(productsAPI.products);
 });
 
-app.get('/products/:category', (req, res, next) => {
+app.get('/api/products/:category', (req, res, next) => {
     if (!req.params && !req.params.category) {
         res.status(500);
         next();
