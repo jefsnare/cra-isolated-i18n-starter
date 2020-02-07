@@ -1,26 +1,29 @@
 import Grid from "@material-ui/core/Grid";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Productcard } from "../components/productcard";
 
 export const ProductList = () => {
-  fetch('/api/products').then(data => data.json()).then(data => console.log(data));
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      return await fetch('/api/products').then(data => data.json());
+    }
+
+    fetchData().then(data => setProducts(data));
+  }, []);
+
+  if (!Boolean(products.length)) {
+    return <span>loading</span>;
+  }
 
   return (
-    <>
-      <Grid item xs={4}>
-        Product card
-      </Grid>
-      <Grid item xs={4}>
-        Product card
-      </Grid>
-      <Grid item xs={4}>
-        Product card
-      </Grid>
-      <Grid item xs={6}>
-        Banner
-      </Grid>
-      <Grid item xs={6}>
-        Incentive
-      </Grid>
-    </>
+    <Grid container>
+      {products.map(product => (
+        <Grid item xs={4}>
+          <Productcard product={product} />
+        </Grid>
+      ))}
+    </Grid>
   )
 }
