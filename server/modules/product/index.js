@@ -29,14 +29,14 @@ module.exports = class Product {
             price: 1.05,
             category: 'fruit'
         }, {
-            id: 203,
+            id: 205,
             title: 'Kiwi',
             quantity: 250,
             quantityUnit: 'g',
             price: 1.15,
             category: 'fruit'
         }, {
-            id: 204,
+            id: 208,
             title: 'Mango',
             quantity: 2,
             quantityUnit: 'stuks',
