@@ -1,15 +1,15 @@
-import React from 'react';
-import {LocationProvider, Router} from "@reach/router";
-import Grid from '@material-ui/core/Grid';
-import { makeStyles, Container } from '@material-ui/core';
-import { Breadcrumb } from './components/breadcrumbs';
+import React from "react";
+import { LocationProvider, Router } from "@reach/router";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles, Container } from "@material-ui/core";
+import { Breadcrumb } from "./components/breadcrumbs";
 import { Index } from "./pages";
 import { ProductList } from "./pages/productlist";
 
 const useStyles = makeStyles({
   root: {
-    margin: '30px 0',
-  },
+    margin: "30px 0"
+  }
 });
 
 function App() {
