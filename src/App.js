@@ -24,10 +24,12 @@ function App() {
               <Breadcrumb />
             </LocationProvider>
           </Grid>
-          <Router>
-            <Index path="/" />
-            <ProductList path="/list" />
-          </Router>
+          <Grid item xs={12}>
+            <Router>
+              <Index path="/" />
+              <ProductList path="/list" />
+            </Router>
+          </Grid>
         </Grid>
       </main>
     </Container>

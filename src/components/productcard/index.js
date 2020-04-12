@@ -9,7 +9,6 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
     margin: "10px"
   },
   bullet: {
@@ -22,7 +21,7 @@ const useStyles = makeStyles({
     textTransform: "uppercase"
   },
   media: {
-    height: 150
+    height: 160
   }
 });
 
