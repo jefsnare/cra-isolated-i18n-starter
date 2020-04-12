@@ -28,6 +28,7 @@ function App() {
             <Router>
               <Index path="/" />
               <ProductList path="/list" />
+              <ProductList path="/list/:category" />
             </Router>
           </Grid>
         </Grid>

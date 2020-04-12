@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 201,
+      "title": "Aardappelen",
+      "quantity": 500,
+      "quantityUnit": "g",
+      "price": 1.35,
+      "category": "basis",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "0123456789",
+      "crosssells": [202]
+    },
+    {
+      "id": 202,
+      "title": "Andijvie",
+      "quantity": 800,
+      "quantityUnit": "g",
+      "price": 1.99,
+      "category": "basis",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "091231729",
+      "crosssells": [201]
+    },
+    {
+      "id": 203,
+      "title": "Appel",
+      "quantity": 1000,
+      "quantityUnit": "g",
+      "price": 2.49,
+      "category": "fruit",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "8745464300",
+      "crosssells": [204, 205]
+    },
+    {
+      "id": 204,
+      "title": "Banaan",
+      "quantity": 4,
+      "quantityUnit": "stuks",
+      "price": 1.05,
+      "category": "fruit",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "2327232881",
+      "crosssells": []
+    },
+    {
+      "id": 205,
+      "title": "Kiwi",
+      "quantity": 250,
+      "quantityUnit": "g",
+      "price": 1.15,
+      "category": "fruit",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "9472771771",
+      "crosssells": []
+    },
+    {
+      "id": 208,
+      "title": "Mango",
+      "quantity": 2,
+      "quantityUnit": "stuks",
+      "price": 2.99,
+      "category": "fruit",
+      "image": "https://placeimg.com/350/150/nature",
+      "description": "Sample description",
+      "EAN": "1212800019",
+      "crosssells": [205, 204]
+    }
+  ]
+}

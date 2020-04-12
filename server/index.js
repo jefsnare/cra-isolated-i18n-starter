@@ -14,13 +14,13 @@ app.use(bodyParser.json());
 const productsAPI = new Product();
 
 app.get('/api/products', (req, res, next) => {
-    if (!productsAPI && !productsAPI.products) {
+    if (!productsAPI && !productsAPI.items) {
        res.status(400);
        next();
     }
 
     res.status(200);
-    res.send(productsAPI.products);
+    res.send(productsAPI.items);
 });
 
 app.get('/api/products/:category', (req, res, next) => {
@@ -29,8 +29,8 @@ app.get('/api/products/:category', (req, res, next) => {
         next();
     }
 
-    const products = Product.filterProducts(productsAPI.products, 'category', req.params.category);
-
+    const products = Product.filterProducts(productsAPI.items, 'category', req.params.category);
+console.log('key', products);
     if (products && Boolean(products.length)) {
         res.status(200);
         res.send(products);

@@ -25,11 +25,13 @@ const useStyles = makeStyles({
   }
 });
 
-export const ProductCard = ({ product: { title, price, category, image } }) => {
+export const ProductCard = ({
+  product: { id, title, price, category, image }
+}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} key={id}>
       <CardMedia className={classes.media} image={image} title={title} />
       <CardContent>
         <Typography
